@@ -1,5 +1,6 @@
 package com.daelim.database.controller
 
+import com.daelim.database.dto.Chat
 import com.daelim.database.dto.User
 import com.daelim.database.service.UserService
 import org.springframework.http.ResponseEntity
@@ -17,6 +18,8 @@ class UserController(private val userService: UserService) {
     ): ResponseEntity<User> {
         return ResponseEntity.ok(userService.registerUser(username, password))
     }
+
+
 
     @GetMapping("/login")
     fun login(
@@ -40,5 +43,13 @@ class UserController(private val userService: UserService) {
         } else {
             ResponseEntity.notFound().build()
         }
+    }
+
+    @PostMapping("/chat")
+    fun chat(
+        @RequestParam username: String,
+        @RequestParam password: String
+    ): ResponseEntity<Chat> {
+        return ResponseEntity.ok(userService.registerUser(username, password))
     }
 }
