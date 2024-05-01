@@ -18,18 +18,6 @@ class UserController(private val userService: UserService) {
         return ResponseEntity.ok(userService.registerUser(username, password))
     }
 
-    @GetMapping("/anothertesting")
-    fun testing(
-        @RequestParam username: String,
-        @RequestParam password: String
-    ): ResponseEntity<String> {
-        return if (userService.validateUser(username, password)) {
-            ResponseEntity.ok(userService.createSession(username))
-        } else {
-            ResponseEntity.notFound().build()
-        }
-    }
-
     @GetMapping("/login")
     fun login(
         @RequestParam username: String,
