@@ -12,7 +12,7 @@ import java.util.Date
 data class Chat(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var time: String = LocalDateTime.now().toString(),
+    var time: String,
     var username: String,
     var chat: String
 )
