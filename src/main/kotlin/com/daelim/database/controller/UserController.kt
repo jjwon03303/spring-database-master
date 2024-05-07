@@ -28,6 +28,7 @@ class UserController(private val userService: UserService) {
     ): ResponseEntity<String> {
         return if (userService.validateUser(username, password)) {
             ResponseEntity.ok(userService.createSession(username))
+            //if문 통과시
         } else {
             ResponseEntity.notFound().build()
         }
