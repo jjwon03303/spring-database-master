@@ -10,7 +10,7 @@ class ChatService (
     private val redisTemplate: StringRedisTemplate // Redis 템플릿 추가
 ){
 
-    fun postChat (username : String, chat : String ) {
+    fun postChat (username : String, chat : String ): Chat {
         val chat = Chat(time = LocalDate.now().toString(), username = username, chat = chat)
         return chatRepository.save(chat)
     }

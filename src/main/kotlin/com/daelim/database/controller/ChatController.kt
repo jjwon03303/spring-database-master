@@ -1,5 +1,6 @@
 package com.daelim.database.controller
 
+import com.daelim.database.dto.Chat
 import com.daelim.database.dto.User
 import com.daelim.database.service.ChatService
 import org.springframework.http.ResponseEntity
@@ -10,8 +11,8 @@ class ChatController (private val chatService: ChatService) {
     @PostMapping("/chat")
     fun register(
         @RequestParam username: String,
-        @RequestParam password: String
-    ): ResponseEntity<User> {
-        return ResponseEntity.ok(chatService.postChat(username, password))
+        @RequestParam chat: String
+    ): ResponseEntity<Chat> {
+        return ResponseEntity.ok(chatService.postChat(username, chat))
     }
 }
