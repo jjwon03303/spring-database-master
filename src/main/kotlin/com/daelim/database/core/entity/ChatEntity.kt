@@ -7,7 +7,7 @@ import java.util.Date
 
 @Entity
 @Table(name = "chats")
-data class Chat(
+data class ChatEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var time: String? = null,
