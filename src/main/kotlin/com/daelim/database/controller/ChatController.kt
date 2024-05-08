@@ -1,7 +1,7 @@
 package com.daelim.database.controller
 
-import com.daelim.database.dto.Chat
-import com.daelim.database.dto.User
+import com.daelim.database.core.dto.Chat
+import com.daelim.database.core.dto.User
 import com.daelim.database.service.ChatService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping

@@ -1,6 +1,6 @@
 package com.daelim.database.service
 
-import com.daelim.database.dto.User
+import com.daelim.database.core.dto.User
 import com.daelim.database.repository.UserRepository
 import org.springframework.data.redis.core.RedisTemplate
 import org.springframework.data.redis.core.StringRedisTemplate

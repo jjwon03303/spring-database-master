@@ -1,6 +1,6 @@
 package com.daelim.database.service
 
-import com.daelim.database.dto.Chat
+import com.daelim.database.core.dto.Chat
 import com.daelim.database.repository.ChatRepository
 import org.springframework.data.redis.core.StringRedisTemplate
 import org.springframework.stereotype.Service

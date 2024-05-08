@@ -1,4 +1,4 @@
-package com.daelim.database.dto
+package com.daelim.database.core.dto
 
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
