@@ -30,6 +30,9 @@ dependencies {
 	runtimeOnly("com.mysql:mysql-connector-j")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 
+	//메모리상의 데이터베이스와 연결하는 h2 디펜던시 연결
+	testRuntimeOnly("com.h2database:h2")
+
 	//	swagger-ui
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
 
