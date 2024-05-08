@@ -46,11 +46,4 @@ class UserController(private val userService: UserService) {
         }
     }
 
-    @PostMapping("/chat")
-    fun chat(
-        @RequestParam username: String,
-        @RequestParam password: String
-    ): ResponseEntity<Chat> {
-        return ResponseEntity.ok(userService.registerUser(username, password))
-    }
 }
